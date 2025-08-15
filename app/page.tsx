@@ -52,15 +52,15 @@ export default function Portfolio() {
 						href="#skills"
 						className="hover:text-emerald-400 transition-colors flex items-center gap-1 sm:gap-2"
 					>
-						<Code className="w-3 h-3 sm:w-4 sm:h-4" />
-						<span className="hidden xs:inline">Skills</span>
-					</a>
-					<a
-						href="#education"
-						className="hover:text-emerald-400 transition-colors flex items-center gap-1 sm:gap-2"
-					>
 						<GraduationCap className="w-3 h-3 sm:w-4 sm:h-4" />
 						<span className="hidden xs:inline">Education</span>
+					</a>
+					<a
+						href="#portfolio"
+						className="hover:text-emerald-400 transition-colors flex items-center gap-1 sm:gap-2"
+					>
+						<Code className="w-3 h-3 sm:w-4 sm:h-4" />
+						<span className="hidden xs:inline">Skills</span>
 					</a>
 				</div>
 			</nav>
@@ -563,6 +563,231 @@ export default function Portfolio() {
 								</div>
 							</CardContent>
 						</Card>
+					</div>
+				</div>
+			</section>
+
+			<section id="portfolio" className="px-2 sm:px-4 py-12 sm:py-16">
+				<div className="max-w-6xl mx-auto">
+					<h2 className="font-serif text-2xl xs:text-3xl sm:text-3xl md:text-5xl font-bold text-white mb-8 sm:mb-12 text-center px-2">
+						Featured <span className="gradient-text">Projects</span>
+					</h2>
+
+					<div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mx-2 sm:mx-0">
+						{/* Sinarmas Insurance */}
+						<Card className="glass-card border-emerald-400/30 text-white hover:glow-effect transition-all duration-300 group">
+							<CardHeader className="pb-3 sm:pb-4">
+								<div className="flex items-center justify-between">
+									<CardTitle className="text-emerald-400 text-base sm:text-lg">
+										Sinarmas Insurance
+									</CardTitle>
+									<Badge className="bg-emerald-500/20 text-emerald-400 border-emerald-400/30 text-xs">
+										Fintech
+									</Badge>
+								</div>
+								<CardDescription className="text-gray-300 text-xs sm:text-sm">
+									Enhanced online insurance services with improved user
+									experience and streamlined processes
+								</CardDescription>
+							</CardHeader>
+							<CardContent>
+								<div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
+									{['React.js', 'UI/UX', 'API Integration'].map((tech) => (
+										<Badge
+											key={tech}
+											variant="outline"
+											className="border-emerald-400/30 text-emerald-300 text-xs"
+										>
+											{tech}
+										</Badge>
+									))}
+								</div>
+								<Button
+									size="sm"
+									className="w-full bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 border border-emerald-400/30 text-xs"
+									onClick={() =>
+										window.open('https://www.simasjiwa.co.id/', '_blank')
+									}
+								>
+									View Live Site
+								</Button>
+							</CardContent>
+						</Card>
+
+						{/* Simobi Mobile Banking */}
+						<Card className="glass-card border-blue-400/30 text-white hover:glow-effect transition-all duration-300 group">
+							<CardHeader className="pb-3 sm:pb-4">
+								<div className="flex items-center justify-between">
+									<CardTitle className="text-blue-400 text-base sm:text-lg">
+										Simobi Banking
+									</CardTitle>
+									<Badge className="bg-blue-500/20 text-blue-400 border-blue-400/30 text-xs">
+										Fintech
+									</Badge>
+								</div>
+								<CardDescription className="text-gray-300 text-xs sm:text-sm">
+									Complete revamp of mobile banking platform with enhanced UI/UX
+									and cross-platform performance
+								</CardDescription>
+							</CardHeader>
+							<CardContent>
+								<div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
+									{['React Native', 'Mobile UI', 'Performance'].map((tech) => (
+										<Badge
+											key={tech}
+											variant="outline"
+											className="border-blue-400/30 text-blue-300 text-xs"
+										>
+											{tech}
+										</Badge>
+									))}
+								</div>
+								<Button
+									size="sm"
+									className="w-full bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 border border-blue-400/30 text-xs"
+									onClick={() =>
+										window.open(
+											'https://www.banksinarmas.com/id/layanan/simobi',
+											'_blank'
+										)
+									}
+								>
+									View Live Site
+								</Button>
+							</CardContent>
+						</Card>
+
+						{/* Otsuka Portal */}
+						<Card className="glass-card border-purple-400/30 text-white hover:glow-effect transition-all duration-300 group">
+							<CardHeader className="pb-3 sm:pb-4">
+								<div className="flex items-center justify-between">
+									<CardTitle className="text-purple-400 text-base sm:text-lg">
+										Otsuka Portal
+									</CardTitle>
+									<Badge className="bg-purple-500/20 text-purple-400 border-purple-400/30 text-xs">
+										Healthcare
+									</Badge>
+								</div>
+								<CardDescription className="text-gray-300 text-xs sm:text-sm">
+									Corporate portal with scalable architecture and clean design,
+									leading frontend development team
+								</CardDescription>
+							</CardHeader>
+							<CardContent>
+								<div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
+									{['Next.js', 'Team Lead', 'Scalability'].map((tech) => (
+										<Badge
+											key={tech}
+											variant="outline"
+											className="border-purple-400/30 text-purple-300 text-xs"
+										>
+											{tech}
+										</Badge>
+									))}
+								</div>
+								<Button
+									size="sm"
+									className="w-full bg-purple-500/20 hover:bg-purple-500/30 text-purple-400 border border-purple-400/30 text-xs"
+									onClick={() =>
+										window.open('https://otsukaportal.aio.co.id/', '_blank')
+									}
+								>
+									View Live Site
+								</Button>
+							</CardContent>
+						</Card>
+
+						{/* Auto2000 CMS */}
+						<Card className="glass-card border-orange-400/30 text-white hover:glow-effect transition-all duration-300 group">
+							<CardHeader className="pb-3 sm:pb-4">
+								<div className="flex items-center justify-between">
+									<CardTitle className="text-orange-400 text-base sm:text-lg">
+										Auto2000 CMS
+									</CardTitle>
+									<Badge className="bg-orange-500/20 text-orange-400 border-orange-400/30 text-xs">
+										Automotive
+									</Badge>
+								</div>
+								<CardDescription className="text-gray-300 text-xs sm:text-sm">
+									Comprehensive Content Management System for Astra's Auto2000,
+									enabling efficient marketing operations
+								</CardDescription>
+							</CardHeader>
+							<CardContent>
+								<div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
+									{['CMS', 'Team Management', 'Marketing'].map((tech) => (
+										<Badge
+											key={tech}
+											variant="outline"
+											className="border-orange-400/30 text-orange-300 text-xs"
+										>
+											{tech}
+										</Badge>
+									))}
+								</div>
+								<Button
+									size="sm"
+									className="w-full bg-orange-500/20 hover:bg-orange-500/30 text-orange-400 border border-orange-400/30 text-xs"
+									onClick={() =>
+										window.open('https://auto2000.co.id/', '_blank')
+									}
+								>
+									View Live Site
+								</Button>
+							</CardContent>
+						</Card>
+
+						{/* Halal Certification */}
+						<Card className="glass-card border-green-400/30 text-white hover:glow-effect transition-all duration-300 group sm:col-span-2 lg:col-span-1">
+							<CardHeader className="pb-3 sm:pb-4">
+								<div className="flex items-center justify-between">
+									<CardTitle className="text-green-400 text-base sm:text-lg">
+										Halal Certification
+									</CardTitle>
+									<Badge className="bg-green-500/20 text-green-400 border-green-400/30 text-xs">
+										GovTech
+									</Badge>
+								</div>
+								<CardDescription className="text-gray-300 text-xs sm:text-sm">
+									BPJPH digital certification platform streamlining halal
+									certification workflow and compliance processes
+								</CardDescription>
+							</CardHeader>
+							<CardContent>
+								<div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
+									{['Government', 'Workflow', 'Compliance'].map((tech) => (
+										<Badge
+											key={tech}
+											variant="outline"
+											className="border-green-400/30 text-green-300 text-xs"
+										>
+											{tech}
+										</Badge>
+									))}
+								</div>
+								<Button
+									size="sm"
+									className="w-full bg-green-500/20 hover:bg-green-500/30 text-green-400 border border-green-400/30 text-xs"
+									onClick={() =>
+										window.open(
+											'https://halalmaxcert.indonesiancloud.com/',
+											'_blank'
+										)
+									}
+								>
+									View Live Site
+								</Button>
+							</CardContent>
+						</Card>
+					</div>
+
+					<div className="text-center mt-8 sm:mt-12">
+						<p className="text-gray-400 text-xs sm:text-sm max-w-2xl mx-auto px-4">
+							These projects showcase my expertise across diverse industries,
+							from fintech and healthcare to government and automotive sectors,
+							demonstrating my ability to deliver scalable, user-centric
+							solutions.
+						</p>
 					</div>
 				</div>
 			</section>
